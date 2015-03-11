@@ -19,7 +19,7 @@ cf push hello
 Use the app.
 
 ```bash
-cf push hello
+curl hello.10.244.0.34.xip.io
 ```
 
 Undeploy
