@@ -33,6 +33,15 @@ Deploy the app.
 cf push
 ```
 
+Scale teh app.
+
+```bash
+cf scale mywordpress -i 2
+cf scale mywordpress -i 1
+cf scale mywordpress -k 512M
+cf scale mywordpress -m 256M
+```
+
 Undeploy
 
 ```bash
