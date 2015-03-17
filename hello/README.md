@@ -19,6 +19,16 @@ cf push hello
 Use the app.
 
 ```bash
+cf apps
+```
+
+    Getting apps in org me / space development as admin...
+    OK
+
+    name    requested state   instances   memory   disk   urls
+    hello   started           1/1         256M     1G     hello.10.244.0.34.xip.io
+
+```bash
 curl hello.10.244.0.34.xip.io
 ```
 
