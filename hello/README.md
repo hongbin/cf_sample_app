@@ -16,7 +16,7 @@ Deploy the app.
 cf push hello
 ```
 
-Use the app.
+List deployed apps.
 
 ```bash
 cf apps
@@ -27,6 +27,8 @@ cf apps
 
     name    requested state   instances   memory   disk   urls
     hello   started           1/1         256M     1G     hello.10.244.0.34.xip.io
+
+Use the app.
 
 ```bash
 curl hello.10.244.0.34.xip.io
