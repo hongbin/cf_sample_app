@@ -14,17 +14,20 @@ cf target -o me
 cf target -s development
 ```
 
-Create security group (if haven't created before). This allows the application to connect to MySQL.
+Create security group. This allows the application to connect to MySQL.
 
 ```bash
 cf create-security-group p-mysql rule.json
 cf bind-running-security-group p-mysql
+cf security-groups
 ```
 
-Create a MySQL service (if you don't have one already).
+Create a MySQL service.
 
 ```bash
+cf marketplace
 cf create-service p-mysql 100mb mysqlservice
+cf services
 ```
 
 Deploy the app.
@@ -33,17 +36,33 @@ Deploy the app.
 cf push
 ```
 
-Scale teh app.
+List deployed apps.
+
+    $ cf apps
+    Getting apps in org me / space development as admin...
+    OK
+
+    name          requested state   instances   memory   disk   urls
+    mywordpress   started           1/1         128M     1G     wordpress-on.10.244.0.34.xip.io
+
+Scale the app.
 
 ```bash
 cf scale mywordpress -i 2
-cf scale mywordpress -i 1
-cf scale mywordpress -k 512M
+cf apps
 cf scale mywordpress -m 256M
+cf apps
 ```
 
 Undeploy
 
 ```bash
 cf delete mywordpress
+```
+
+Cleanup
+
+```bash
+cf delete-service mysqlservice
+cf delete-security-group p-mysql
 ```
