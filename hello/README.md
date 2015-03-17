@@ -18,10 +18,7 @@ cf push hello
 
 List deployed apps.
 
-```bash
-cf apps
-```
-
+    $ cf apps
     Getting apps in org me / space development as admin...
     OK
 
