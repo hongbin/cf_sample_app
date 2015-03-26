@@ -14,19 +14,11 @@ cf target -o me
 cf target -s development
 ```
 
-Create security group. This allows the application to connect to MySQL.
-
-```bash
-cf create-security-group p-mysql rule.json
-cf bind-running-security-group p-mysql
-cf security-groups
-```
-
 Create a MySQL service.
 
 ```bash
 cf marketplace
-cf create-service p-mysql 100mb mysqlservice
+cf create-service p-mysql 100mb-dev mysqlservice
 cf services
 ```
 
