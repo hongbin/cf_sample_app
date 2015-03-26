@@ -8,7 +8,7 @@ Log in and setup.
 
 ```bash
 export no_proxy=192.168.50.4,xip.io
-cf api --skip-ssl-validation https://api.10.244.0.34.xip.io
+cf api --skip-ssl-validation https://api.136.159.3.202.xip.io
 cf auth admin admin
 cf target -o me
 cf target -s development
@@ -35,7 +35,7 @@ List deployed apps.
     OK
 
     name          requested state   instances   memory   disk   urls
-    mywordpress   started           1/1         128M     1G     wordpress-on.10.244.0.34.xip.io
+    mywordpress   started           1/1         128M     1G     wordpress-on.136.159.3.202.xip.io
 
 Scale the app.
 
