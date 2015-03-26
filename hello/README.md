@@ -3,8 +3,7 @@
 Log in and setup.
 
 ```bash
-export no_proxy=192.168.50.4,xip.io
-cf api --skip-ssl-validation https://api.136.159.3.202.xip.io
+cf api http://api.136.159.3.202.xip.io
 cf auth admin admin
 cf target -o me
 cf target -s development
