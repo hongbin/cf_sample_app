@@ -21,7 +21,7 @@ Login to Cloud Foundry
 Login to cloud foundry first
 
     cf api http://api.136.159.3.202.xip.io
-    cf auth admin admin
+    cf auth admin XXX
     cf target -o me
     cf target -s development
 
