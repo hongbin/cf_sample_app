@@ -55,5 +55,4 @@ Cleanup
 
 ```bash
 cf delete-service mysqlservice
-cf delete-security-group p-mysql
 ```
